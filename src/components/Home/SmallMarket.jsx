@@ -13,21 +13,23 @@ const SmallMarket = () => {
     { name: "Metaverse", id: 4 },
   ];
 
-  // useEffect(() => {
-  //   axios
-  //     .get("")
-  //     .then((res) => {
-  //       console.log(res.data);
-  //       setCoinList(res.data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get(
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=9&page=1&sparkline=false",
+      )
+      .then((res) => {
+        console.log(res.data);
+        setCoinList(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   return (
-    <div className="market-small py-10 bg-slate-100">
-      <div className="wrapper mx-4 lg:mx-0 rounded-xl shadow-lg bg-white p-3">
+    <div className="market-small py-10">
+      <div className="wrapper mx-4 lg:mx-0 rounded-xl shadow-lg bg-white px-3 py-16">
         <div className="categories pb-2 flex justify-around items-center border-b border-b-slate-200">
           {categories.map((item) => (
             <div key={item.id}>
@@ -44,12 +46,33 @@ const SmallMarket = () => {
             </div>
           ))}
         </div>
-        {coinList &&
-          coinList.map((item, index) => (
-            <div className="datas">
-              <p>{item.id}</p>
-            </div>
-          ))}
+
+        <div className="smallMarket md:grid md:grid-cols-3">
+          {coinList &&
+            coinList.map((item, index) => (
+              <div
+                className="shadow-lg py-8 px-4 mx-2 mt-10 rounded-2xl"
+                key={index}>
+                <div className="top flex justify-start items-center rounded-2xl">
+                  <img src={item.image} alt="" className=" w-6 mr-2" />
+                  <p className=" font-medium mr-2">{item.name}</p>
+                  <span className="font-semibold text-gray-500">
+                    {item.symbol.toUpperCase()}/USD
+                  </span>
+                </div>
+                <div className="middle">
+                  <p className=" text-2xl font-bold">
+                    USD {item.current_price}
+                  </p>
+                </div>
+                <div className="bottom">
+                  <p className= {item.price_change_percentage_24h > 0 ? "text-white bg-green-400 p-1 text-center w-[20%] md:w-2/5 rounded-xl" : "text-white bg-red-400 p-1 text-center w-[20%] md:w-2/5 rounded-xl"}>
+                    {item.price_change_percentage_24h}
+                  </p>
+                </div>
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );
