@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="about py-20 bg-white rounded-xl">
+    <div className="about py-10 mx-3 mt-20 bg-white rounded-xl">
       <div className="container max-w-6xl mx-auto">
         <div className="wrapper lg:grid lg:grid-cols-2">
           <div className="first flex items-center">

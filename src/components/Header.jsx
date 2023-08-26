@@ -11,7 +11,9 @@ const Header = () => {
       <div className="container max-w-6xl mx-auto">
         <div className="wrapper flex justify-between items-center">
           <div className="left">
-            <h1 className=" font-bold bg-black text-white py-1 px-3 rounded-sm">Cryp<span className="text-purple-600">Tonight</span></h1>
+            <h1 className=" font-bold bg-black text-white py-1 px-3 rounded-sm">
+              Cryp<span className="text-purple-600">Tonight</span>
+            </h1>
           </div>
 
           <div className="right flex justify-center items-center">
@@ -50,7 +52,9 @@ const Header = () => {
                   ? "hidden"
                   : "navbar px-2 py-3 absolute top-0 left-0 h-screen w-2/4 bg-black"
               }>
-              <h1 className=" font-bold text-white py-1 px-3 rounded-sm">Cryp<span className="text-purple-600">Tonight</span></h1>
+              <h1 className=" font-bold text-white py-1 px-3 rounded-sm">
+                Cryp<span className="text-purple-600">Tonight</span>
+              </h1>
               <div className="links flex flex-col">
                 <Link className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
                   Homepage

@@ -19,7 +19,6 @@ const SmallMarket = () => {
         "https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=9&page=1&sparkline=false",
       )
       .then((res) => {
-        console.log(res.data);
         setCoinList(res.data);
       })
       .catch((error) => {
@@ -29,14 +28,14 @@ const SmallMarket = () => {
 
   return (
     <div className="market-small py-10">
-      <div className="wrapper mx-4 lg:mx-0 rounded-xl shadow-lg bg-white px-3 py-16">
+      <div className="wrapper mx-4 lg:mx-0 rounded-xl shadow-lg bg-white px-3 py-7">
         <div className="categories pb-2 flex justify-around items-center border-b border-b-slate-200">
           {categories.map((item) => (
             <div key={item.id}>
               <p
                 className={
                   item.id === activeItem
-                    ? "bg-purple-600 px-2 py-1 rounded-xl text-white font-semibold text-sm cursor-pointer duration-150"
+                    ? "bg-purple-600 px-2 py-1 rounded-2xl text-white font-semibold text-sm cursor-pointer duration-150"
                     : "text-sm px-2 py-1 font-semibold cursor-pointer duration-150"
                 }
                 key={item.id}
@@ -51,7 +50,7 @@ const SmallMarket = () => {
           {coinList &&
             coinList.map((item, index) => (
               <div
-                className="shadow-lg py-8 px-4 mx-2 mt-10 rounded-2xl"
+                className="shadow-lg p-2 md:py-8 md:px-4 md:mx-2 mt-10 rounded-2xl"
                 key={index}>
                 <div className="top flex justify-start items-center rounded-2xl">
                   <img src={item.image} alt="" className=" w-6 mr-2" />
@@ -66,7 +65,12 @@ const SmallMarket = () => {
                   </p>
                 </div>
                 <div className="bottom">
-                  <p className= {item.price_change_percentage_24h > 0 ? "text-white bg-green-400 p-1 text-center w-[20%] md:w-2/5 rounded-xl" : "text-white bg-red-400 p-1 text-center w-[20%] md:w-2/5 rounded-xl"}>
+                  <p
+                    className={
+                      item.price_change_percentage_24h > 0
+                        ? "text-white bg-green-400 p-1 text-center w-[25%] md:w-2/5 rounded-2xl"
+                        : "text-white bg-red-400 p-1 text-center w-[25%] md:w-2/5 rounded-2xl"
+                    }>
                     {item.price_change_percentage_24h}
                   </p>
                 </div>

@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container max-w-6xl mx-auto px-5 py-10">
         <div className="wrapper">
           <div className="contacts">
-            <h1 className=" font-bold bg-black text-white py-1 px-3 rounded-sm w-1/4">
+            <h1 className=" font-bold bg-black text-white py-1 px-3 rounded-sm w-2/5 md:w-1/5">
               Cryp<span className="text-purple-600">Tonight</span>
             </h1>
             <h3 className=" mt-5 text-2xl font-bold">Let's Talk 🤙</h3>
