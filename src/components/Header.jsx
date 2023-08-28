@@ -35,7 +35,7 @@ const Header = () => {
               <Link className=" font-semibold text-sm mx-2 hover:text-purple-600">
                 Homepage
               </Link>
-              <Link className=" font-semibold text-sm mx-2 hover:text-purple-600">
+              <Link to="/buycrypto" className=" font-semibold text-sm mx-2 hover:text-purple-600">
                 Buy Crypto
               </Link>
               <Link className=" font-semibold text-sm mx-2 hover:text-purple-600">
@@ -56,10 +56,10 @@ const Header = () => {
                 Cryp<span className="text-purple-600">Tonight</span>
               </h1>
               <div className="links flex flex-col">
-                <Link className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
+                <Link to='/' className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
                   Homepage
                 </Link>
-                <Link className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
+                <Link  to="/buycrypto" className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
                   Buy Crypto
                 </Link>
                 <Link className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
