@@ -18,6 +18,18 @@ const BuyPaymentDetails = () => {
             <p className=" font-semibold">Payment Details</p>
           </div>
 
+          <div className="heading flex items-center my-7">
+            <Link className=" font-semibold hover:text-purple-600">
+              Overview
+            </Link>
+            <h4 className=" bg-purple-600 px-4 py-2 mx-5 text-lg font-semibold rounded-2xl text-white">
+              Buy Crypto
+            </h4>
+            <Link className=" font-semibold hover:text-purple-600">
+              Sell Crypto
+            </Link>
+          </div>
+
           <div className=" py-10 flex flex-col items-center bg-white rounded-xl w-[90%] md:w-[70%]">
             <div className="title flex items-center">
               <h4 className=" font-bold mr-5 text-2xl">Success</h4>
@@ -27,7 +39,7 @@ const BuyPaymentDetails = () => {
               />
             </div>
 
-            <p className=" font-medium ">
+            <p className=" font-medium my-7">
               You successfully bought 1.312 BTC for Rockie!
             </p>
 
@@ -38,7 +50,7 @@ const BuyPaymentDetails = () => {
               </div>
 
               <div className="line h-[1px] bg-white my-3"></div>
-              
+
               <div className="bottom flex justify-between">
                 <p className=" font-semibold">Transaction ID</p>
                 <span className=" text-green-400 font-semibold">
@@ -48,7 +60,7 @@ const BuyPaymentDetails = () => {
             </div>
 
             <div className="hplink my-10 font-semibold text-purple-600">
-                <Link to='/'>Go to Home Page</Link>
+              <Link to="/">Go to Home Page</Link>
             </div>
           </div>
         </div>

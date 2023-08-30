@@ -13,7 +13,7 @@ const BuyCryptoMain = () => {
           </div>
 
           <div className="settingBox flex flex-col justify-center items-center px-2 py-5 bg-white rounded-xl">
-            <div className="heading flex items-center">
+            <div className="flex items-center">
               <Link className=" font-semibold hover:text-purple-600">Overview</Link>
               <h4 className=" bg-purple-600 px-4 py-2 mx-5 text-lg font-semibold rounded-2xl text-white">
                 Buy Crypto

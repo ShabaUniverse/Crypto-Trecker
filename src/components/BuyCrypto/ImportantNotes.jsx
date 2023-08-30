@@ -15,10 +15,16 @@ const ImportantNotes = () => {
           </div>
 
           <div className="settingBox flex flex-col justify-center items-center px-2 py-5 bg-white rounded-xl">
-            <div className="heading">
-              <h4 className=" bg-purple-600 px-4 py-2 text-lg font-semibold rounded-2xl text-white">
+            <div className="heading flex items-center">
+              <Link className=" font-semibold hover:text-purple-600">
+                Overview
+              </Link>
+              <h4 className=" bg-purple-600 px-4 py-2 mx-5 text-lg font-semibold rounded-2xl text-white">
                 Buy Crypto
               </h4>
+              <Link className=" font-semibold hover:text-purple-600">
+                Sell Crypto
+              </Link>
             </div>
 
             <div className="steps w-full flex flex-col my-5">
@@ -126,7 +132,11 @@ const ImportantNotes = () => {
                 <button className=" w-[50%] md:w-[25%] py-2 px-4 mt-3 bg-white border border-purple-600 rounded-2xl font-semibold">
                   Cancel
                 </button>
-                <Link to="/buycrypto/buyPaymentDetails" className=" w-[50%] md:w-[25%] py-2 px-4 mt-3 border bg-purple-600 rounded-2xl text-center text-white font-semibold">Let's Move On</Link>
+                <Link
+                  to="/buycrypto/buyPaymentDetails"
+                  className=" w-[50%] md:w-[25%] py-2 px-4 mt-3 border bg-purple-600 rounded-2xl text-center text-white font-semibold">
+                  Let's Move On
+                </Link>
               </div>
             </div>
           </div>
