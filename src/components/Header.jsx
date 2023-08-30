@@ -32,16 +32,16 @@ const Header = () => {
             </div>
 
             <div className="hidden md:flex mr-10">
-              <Link className=" font-semibold text-sm mx-2 hover:text-purple-600">
+              <Link to="/" className=" font-semibold text-sm mx-2 hover:text-purple-600">
                 Homepage
               </Link>
               <Link to="/buycrypto" className=" font-semibold text-sm mx-2 hover:text-purple-600">
                 Buy Crypto
               </Link>
-              <Link className=" font-semibold text-sm mx-2 hover:text-purple-600">
+              <Link to="/sellcrypto" className=" font-semibold text-sm mx-2 hover:text-purple-600">
                 Sell Crypto
               </Link>
-              <Link className=" font-semibold text-sm mx-2 hover:text-purple-600">
+              <Link to="/markets" className=" font-semibold text-sm mx-2 hover:text-purple-600">
                 Markets
               </Link>
             </div>
@@ -62,10 +62,10 @@ const Header = () => {
                 <Link  to="/buycrypto" className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
                   Buy Crypto
                 </Link>
-                <Link className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
+                <Link to="/sellcrypto" className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
                   Sell Crypto
                 </Link>
-                <Link className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
+                <Link to="/markets" className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
                   Markets
                 </Link>
               </div>
