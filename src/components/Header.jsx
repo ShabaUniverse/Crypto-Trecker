@@ -41,9 +41,6 @@ const Header = () => {
               <Link to="/sellcrypto" className=" font-semibold text-sm mx-2 hover:text-purple-600">
                 Sell Crypto
               </Link>
-              <Link to="/markets" className=" font-semibold text-sm mx-2 hover:text-purple-600">
-                Markets
-              </Link>
             </div>
 
             <div
@@ -64,9 +61,6 @@ const Header = () => {
                 </Link>
                 <Link to="/sellcrypto" className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
                   Sell Crypto
-                </Link>
-                <Link to="/markets" className=" font-semibold pl-3 text-white text-sm my-4 hover:text-purple-600">
-                  Markets
                 </Link>
               </div>
             </div>
